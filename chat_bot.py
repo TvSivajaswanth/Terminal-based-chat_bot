@@ -25,7 +25,8 @@ def load_memory():
         with open(MEMORY_FILE,"r",encoding="utf-8") as file:
             return json.load(file)
         
-    except (json.JSONDecodeError, OSError):       return []    
+    except (json.JSONDecodeError, OSError):      
+        return []    
     
 def save_memory(messages):
     
